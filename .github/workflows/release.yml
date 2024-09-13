@@ -31,5 +31,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         tag_name="${GITHUB_REF##*/}"
-        gh release create "$tag_name" -t "$tag_name" readtdose.*
+        gh release create "$tag_name" -t "$tag_name" readtdose*
 
