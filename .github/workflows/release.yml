@@ -24,7 +24,7 @@ jobs:
 
     - name: Build
       run: |
-        CGO_ENABLED=0 GOARCH=amd64 GOOS=windows go build -ldflags="-s -w" -o readtdose_win64.exe ./main.go
+        CGO_ENABLED=0 GOARCH=amd64 garble -literals -tiny -seed=random GOOS=windows go build -ldflags="-s -w" -o readtdose_win64.exe ./main.go
 
     - name: Create Release
       env:
