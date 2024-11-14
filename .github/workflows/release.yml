@@ -25,7 +25,7 @@ jobs:
       run: go install mvdan.cc/garble@latest
     - name: Build
       run: |
-        CGO_ENABLED=0 GOARCH=amd64 garble -literals -tiny -seed=random build -o readtdose_win64.exe ./main.go
+        GOOS=windows GOARCH=amd64 garble -literals -tiny -seed=random build -o readtdose_win64.exe ./main.go
 
     - name: Create Release
       env:
