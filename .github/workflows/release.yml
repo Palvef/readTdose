@@ -22,7 +22,7 @@ jobs:
     - name: Get dependencies
       run: go get -v -t -d ./...
     - name: install garble
-      run: go install github.com/mvdan/garble@latest
+      run: go install mvdan.cc/garble@latest
     - name: Build
       run: |
         CGO_ENABLED=0 GOARCH=amd64 garble -literals -tiny -seed=random GOOS=windows go build -ldflags="-s -w" -o readtdose_win64.exe ./main.go
